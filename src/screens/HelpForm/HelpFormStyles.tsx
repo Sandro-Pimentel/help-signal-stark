@@ -1,9 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
+  form: {
     flex: 1,
-    backgroundColor: '#F0F0F0',
+    justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  inputText: {
+    fontSize: 25,
+  },
+  inputGroup: {
+    
+  },
 });

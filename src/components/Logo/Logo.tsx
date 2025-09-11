@@ -5,7 +5,7 @@ import { styles } from './LogoStyles';
 
 const IronManLogo = require('../../../assets/iron-man-logo.png');
 
-export function Logo() {
+export default function Logo() {
   return (
     <>
         <Image 

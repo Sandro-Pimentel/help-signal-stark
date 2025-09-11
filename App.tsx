@@ -1,10 +1,7 @@
-import { View } from 'react-native';
-import { Main } from './src/screens/Main';
+import Routes from './src/routes/index';
 
 export default function App() {
   return (
-    <View>
-      <Main/>
-    </View>
+    <Routes />
   );
 }
