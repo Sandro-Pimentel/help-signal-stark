@@ -1,30 +1,26 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, GestureResponderEvent } from 'react-native';
 
 import { styles } from './HelpFormStyles';
 
-export default function HelpForm() {
+import Input from '../../components/Input/Input';
+import NavButton from '../../components/NavButton/NavButton';
+import { Title } from '../../components/Title/Title';
+
+export default function HelpForm({ navigation }: any) {
+  const navToScreen: (event: GestureResponderEvent) => void = () => {
+    navigation.navigate('helpform');
+  }  
+
   return (
     <View style={styles.form}>
-      <View style={styles.inputGroup}>
-        <Text style={styles.inputText}> Nome: </Text>
-        <TextInput 
-          placeholder='Nome'
-          style={styles.inputText}
-        />
-      </View>
-      <View style={styles.inputGroup}>
-        <Text> Telefone: </Text>
-        <TextInput placeholder='Telefone'/>
-      </View>
-      <View>
-        <Text> Localização: </Text>
-        <TextInput placeholder='Localização'/>
-      </View>
-      <View>
-        <Text> Motivo: </Text>
-        <TextInput placeholder='Motivo'/>
-      </View>
+      <Title text='FORMULÁRIO'/>
+      <Input text='Nome:' placeholder='Nome'/>
+      <Input text='Telefone:' placeholder='Telefone'/>
+      <Input text='Localização:' placeholder='Localização'/>
+      <Input text='Motivo:' placeholder='Motivo'/>
+      <NavButton onPress={navToScreen}/>
     </View>
   );
 }
+
