@@ -4,6 +4,7 @@ const { Screen, Navigator } = createStackNavigator();
 
 import Home from "../screens/Home/Home";
 import HelpForm from "../screens/HelpForm/HelpForm";
+import Success from "../screens/Success/Success";
 
 export default function StackRoutes() {
     return (
@@ -20,6 +21,13 @@ export default function StackRoutes() {
             <Screen
                 name="helpform"
                 component={HelpForm}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <Screen
+                name="success"
+                component={Success}
                 options={{
                     headerShown: false,
                 }}

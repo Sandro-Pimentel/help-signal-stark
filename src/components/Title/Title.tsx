@@ -7,7 +7,7 @@ interface TitleProps {
     text: string
 }
 
-export function Title({ text }: TitleProps) {
+export default function Title({ text }: TitleProps) {
   return (
     <Text style={styles.text}> { text } </Text>
   );

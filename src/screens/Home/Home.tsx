@@ -6,7 +6,7 @@ import { styles } from './HomeStyles';
 
 import Logo from '../../components/Logo/Logo';
 import NavButton from '../../components/NavButton/NavButton';
-import { Title } from '../../components/Title/Title';
+import Title from '../../components/Title/Title';
 
 export default function Home({ navigation }: any) {
   const navToScreen: (event: GestureResponderEvent) => void = () => {
@@ -23,7 +23,7 @@ export default function Home({ navigation }: any) {
       <View style={styles.card}>
         <Title text='Help Signal Stark'/>
         <Logo/>
-        <NavButton onPress={navToScreen} />
+        <NavButton title='Enviar sinal' onPress={navToScreen} />
       </View>
     </LinearGradient>
   );
